@@ -1,0 +1,286 @@
+/*====================================================TABLE====================================================*/
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: darkgreen;
+    color: #fff;
+}
+
+td button.edit {
+    padding: 5px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+
+td button.delete {
+    padding: 5px;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+
+td button.edit:hover {
+    background-color: #2980b9;
+}
+
+td button.delete:hover {
+    background-color: #c0392b;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 25px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.container button.create {
+    padding: 12px;
+    color: darkgreen;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container button.create:hover {
+    background-color: var(--lightgreen);
+    color: #fff;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.action-btn {
+    display: none;
+}
+.active {
+    background-color: green !important;
+}
+.search {
+    color: darkgreen !important;
+    border-color: darkgreen !important;
+}
+.search:hover {
+    background-color: var(--lightgreen);
+    border-color: var(--lightgreen) !important;
+    color: #FFF !important;
+}
+.search-icon, .cancel-icon {
+    display: none;
+}
+.page-link {
+    color: var(--darkgreen);
+}
+.page-link.active {
+    border-color: var(--darkgreen) !important;
+    color: #FFF !important;
+}
+.hidden {
+    display: none;
+    background-color: #EEE;
+}
+tbody tr.expandable {
+    cursor: pointer;
+}
+.btn-icon {
+    display: none !important;
+}
+.shop-image {
+    display: flex;
+    justify-content: center;
+}
+.shop-image img {
+    padding: 1.5rem;
+    width: 400px;
+}
+.form-row-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.form-row-end a {
+    font-size: 1rem;
+}
+
+.form-check-input {
+    margin-right: 0.25rem;
+    margin-left: 0;
+    width: 1rem;
+    height: 1rem;
+}
+
+.form-check-input:checked {
+    background-color: green;
+}
+@media (max-width: 1080px) {
+    .action-btn {
+        display: block;
+    }
+    .action-word {
+        display: none;
+    }
+}
+@media (max-width: 700px) {
+    .container {
+        width: 450px;
+        padding: 10px;
+        padding-top: 10%;
+        font-size: 12px;
+        height: auto;
+    }
+
+    td button.edit, td button.delete {
+        font-size: 12px;
+        padding: 2px;
+    }
+
+    .container button.create {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .search-word, .cancel-word {
+        display: none;
+    }
+    .search-icon, .cancel-icon {
+        display: flex;
+    }
+    .search-bar {
+        position: absolute;
+        top: -40%;
+        width: 60%;
+        transition: 0.25s linear;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .search-bar.drop {
+        top: 10%;
+        transition: 0.25s linear;
+    }
+    .btn-text {
+        display: none;
+    }
+    .btn-icon {
+        display: block !important;
+        font-size: 12px;
+    }
+    .shop-image img {
+        padding: 1rem;
+        width: 200px;
+    }
+    h2 {
+        font-size: large;
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .container {
+        width: 360px;
+        padding: 5px;
+        font-size: 10px;
+        height: auto;
+    }
+
+    td button.edit, td button.delete, .btn-responsive {
+        font-size: 10px !important;
+        padding: 2px;
+    }
+
+    .container button.create {
+        font-size: 10px;
+    }
+
+    th,
+    td {
+        padding: 10px 8px 10px 8px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .container {
+        width: 340px;
+        font-size: 10px;
+        height: auto;
+    }
+
+    td button.edit, td button.delete {
+        font-size: 10px;
+        padding: 2px;
+    }
+
+    th,
+    td {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .shop-image img {
+        padding: 0.5rem;
+        width: 150px;
+    }
+}
+
+@media (max-width: 300px) {
+    .container {
+        width: 270px;
+        font-size: 8px;
+        height: auto;
+    }
+
+    td button.edit, td button.delete {
+        font-size: 8px;
+        padding: 2px;
+    }
+
+}

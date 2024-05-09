@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+
+.main {
+    position: fixed;
+    z-index: 100000;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.50);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 25px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.btn-icon {
+    display: none;
+}
+.shop-image {
+    display: flex;
+    justify-content: start;
+}
+.shop-image img {
+    padding: 1.5rem;
+    width: 400px;
+}
+@media (max-width: 700px) {
+    .btn-icon {
+        display: block !important;
+    }
+    .btn-text {
+        display: none;
+    }
+    .shop-image img {
+        padding: 1rem;
+        width: 200px;
+    }
+    .form-group label, .form-group input, .form-group textarea {
+        font-size: 12px;
+    }
+}
+@media (max-width: 400px) {
+    .shop-image img {
+        padding: 0.5rem;
+        width: 150px;
+    }
+}
