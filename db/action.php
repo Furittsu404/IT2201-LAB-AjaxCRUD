@@ -82,13 +82,11 @@ class Database
         if ($id == null) {
             $user = "SELECT user_Email FROM userlogin WHERE user_Email = '$email'";
             $admin = "SELECT admin_Email FROM adminlogin WHERE admin_Email = '$email'";
-            $shop = "SELECT shop_Email FROM shoplogin WHERE shop_Email = '$email'";
         } else {
             $user = "SELECT user_Email FROM userlogin WHERE user_Email = '$email' AND user_ID != $id";
             $admin = "SELECT admin_Email FROM adminlogin WHERE admin_Email = '$email' AND admin_ID != $id";
-            $shop = "SELECT shop_Email FROM shoplogin WHERE shop_Email = '$email' AND shop_ID != $id";
         }
-        $sql = "($user) UNION ($admin) UNION ($shop)";
+        $sql = "($user) UNION ($admin)";
         $result = $this->conn->query($sql);
         return $result->num_rows;
     }
