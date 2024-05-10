@@ -6,7 +6,7 @@ require '../db/connection.php';
 $conn = new Connection();
 $db = new Authentication($conn->connect());
 
-if (isset($_SESSION['user_ID'])) {
+if (isset($_SESSION['admin'])) {
   header("Location: ../admin");
   exit();
 }
