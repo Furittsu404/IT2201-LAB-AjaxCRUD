@@ -36,7 +36,6 @@ class Authentication extends Database
 
     public function register($email, $form)
     {
-        $_SESSION['cart']=[];
         $data = $this->verifyEmail($email);
         if (count($data) > 0) {
             echo "<script>alert('Email already exists!');</script>";
