@@ -1,16 +1,10 @@
 <?php
 session_start();
-include '../db/action.php';
-include '../db/connection.php';
 $_SESSION['site'] = 'adminIndex';
 
 if (!isset($_SESSION['admin'])) {
     header("Location: ../login");
 }
-
-
-$connection = new Connection();
-$database = new Database($connection->connect());
 ?>
 
 <!DOCTYPE html>
