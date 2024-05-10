@@ -47,8 +47,7 @@ class Authentication extends Database
                 if ($key == 'user_Email' || $key == 'user_Password')
                     $user[$key] = $value;
                 else if ($key != 'register') {
-                    $input = preg_replace("#[[:punct:]]#", "", $form[$key]);
-                    $userdata[$key] = $input;
+                    $userdata[$key] = $value;
                 }
             }
 
