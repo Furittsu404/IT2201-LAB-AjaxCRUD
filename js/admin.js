@@ -1,15 +1,3 @@
-function editStudent(id) {
-  window.location.href = "edit.php?id=" + id;
-}
-
-function deleteStudent(id) {
-  window.location.href = "delete.php?id=" + id;
-}
-
-function createNewRecord() {
-  window.location.href = "create.php";
-}
-
 let searchbar = document.querySelector("#search-bar");
 
 document.querySelector("#search-icon").onclick = () => {
