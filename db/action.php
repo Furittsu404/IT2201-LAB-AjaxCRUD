@@ -56,12 +56,6 @@ class Database
         return $this->executeQuery($sql);
     }
 
-    public function showAll($table)
-    {
-        $sql = "Select * from $table";
-        return $this->executeQuery($sql);
-    }
-
     public function addRecord($data, $table)
     {
         $tbl_columns = implode(",", array_keys($data));
