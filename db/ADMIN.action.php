@@ -21,8 +21,7 @@ class adminAction extends Database
             if ($key == 'user_Email' || $key == 'user_Password')
                 $user[$key] = $value;
             else if ($key != 'create' && $key != 'confirmPass') {
-                $input = preg_replace("#[[:punct:]]#", "", $form[$key]);
-                $userdata[$key] = $input;
+                $userdata[$key] = $value;
             }
         }
 
